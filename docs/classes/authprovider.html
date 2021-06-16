@@ -101,9 +101,6 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#appsettings" class="tsd-kind-icon">app<wbr>Settings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#cryptoprovider" class="tsd-kind-icon">crypto<wbr>Provider</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#handleredirect" class="tsd-kind-icon">handle<wbr>Redirect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#login" class="tsd-kind-icon">login</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#logout" class="tsd-kind-icon">logout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#msalclient" class="tsd-kind-icon">msal<wbr>Client</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#msalconfig" class="tsd-kind-icon">msal<wbr>Config</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="authprovider.html#tokenvalidator" class="tsd-kind-icon">token<wbr>Validator</a></li>
@@ -118,10 +115,13 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#gettokenonbehalf" class="tsd-kind-icon">get<wbr>Token<wbr>OnBehalf</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="authprovider.html#handleoverage" class="tsd-kind-icon">handle<wbr>Overage</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#handleredirect" class="tsd-kind-icon">handle<wbr>Redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#hasaccess" class="tsd-kind-icon">has<wbr>Access</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#isauthenticated" class="tsd-kind-icon">is<wbr>Authenticated</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#isauthorized" class="tsd-kind-icon">is<wbr>Authorized</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#login" class="tsd-kind-icon">login</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authprovider.html#logout" class="tsd-kind-icon">logout</a></li>
 							</ul>
 						</section>
 					</div>
@@ -139,7 +139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L68">AuthProvider.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L68">AuthProvider.ts:68</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -164,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AppSettings</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L64">AuthProvider.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L64">AuthProvider.ts:64</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -174,94 +174,9 @@
 					<div class="tsd-signature tsd-kind-icon">crypto<wbr>Provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CryptoProvider</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L66">AuthProvider.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L66">AuthProvider.ts:66</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="handleredirect" class="tsd-anchor"></a>
-					<h3>handle<wbr>Redirect</h3>
-					<div class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L203">AuthProvider.ts:203</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Middleware that handles redirect depending on request state
-							There are basically 2 stages: sign-in and acquire token</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>express request object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express response object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express next function</p>
-							</dd>
-							<dt>returns</dt>
-							<dd></dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="login" class="tsd-anchor"></a>
-					<h3>login</h3>
-					<div class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L112">AuthProvider.ts:112</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Initiate sign in flow</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>express request object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express response object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express next function</p>
-							</dd>
-							<dt>returns</dt>
-							<dd></dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="logout" class="tsd-anchor"></a>
-					<h3>logout</h3>
-					<div class="tsd-signature tsd-kind-icon">logout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L177">AuthProvider.ts:177</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Initiate sign out and destroy the session</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>express request object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express response object</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>express next function</p>
-							</dd>
-							<dt>returns</dt>
-							<dd></dd>
-						</dl>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="msalclient" class="tsd-anchor"></a>
@@ -269,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">msal<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ConfidentialClientApplication</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L68">AuthProvider.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L68">AuthProvider.ts:68</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -279,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">msal<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Configuration</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L65">AuthProvider.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L65">AuthProvider.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -289,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">token<wbr>Validator<span class="tsd-signature-symbol">:</span> <a href="tokenvalidator.html" class="tsd-signature-type" data-tsd-kind="Class">TokenValidator</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L67">AuthProvider.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L67">AuthProvider.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -300,13 +215,13 @@
 					<a name="applyaccessrule" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> apply<wbr>Access<wbr>Rule</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">apply<wbr>Access<wbr>Rule<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccessRule</span>, creds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, isGroups<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Access<wbr>Rule<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccessRule</span>, creds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, credType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L582">AuthProvider.ts:582</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L607">AuthProvider.ts:607</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -321,7 +236,7 @@
 									<h5>creds: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>isGroups: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>credType: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -332,13 +247,13 @@
 					<a name="getauthcode" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Auth<wbr>Code</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Auth<wbr>Code<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthCodeParams</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Auth<wbr>Code<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthCodeParams</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L500">AuthProvider.ts:500</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L517">AuthProvider.ts:517</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -353,6 +268,9 @@
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
 								</li>
 								<li>
 									<h5>params: <span class="tsd-signature-type">AuthCodeParams</span></h5>
@@ -372,7 +290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L612">AuthProvider.ts:612</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L640">AuthProvider.ts:640</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,13 +312,13 @@
 					<a name="gettoken" class="tsd-anchor"></a>
 					<h3>get<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenRequestOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L286">AuthProvider.ts:286</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L302">AuthProvider.ts:302</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -411,7 +329,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-type">TokenOptions</span></h5>
+									<h5>options: <span class="tsd-signature-type">TokenRequestOptions</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -422,13 +340,13 @@
 					<a name="gettokenonbehalf" class="tsd-anchor"></a>
 					<h3>get<wbr>Token<wbr>OnBehalf</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>OnBehalf<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>OnBehalf<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenRequestOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L356">AuthProvider.ts:356</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L373">AuthProvider.ts:373</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -439,7 +357,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-type">TokenOptions</span></h5>
+									<h5>options: <span class="tsd-signature-type">TokenRequestOptions</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -456,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L529">AuthProvider.ts:529</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L547">AuthProvider.ts:547</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -479,6 +397,35 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="handleredirect" class="tsd-anchor"></a>
+					<h3>handle<wbr>Redirect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L217">AuthProvider.ts:217</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Middleware that handles redirect depending on request state
+									There are basically 2 stages: sign-in and acquire token</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="hasaccess" class="tsd-anchor"></a>
 					<h3>has<wbr>Access</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -488,7 +435,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L438">AuthProvider.ts:438</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L455">AuthProvider.ts:455</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -516,7 +463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L91">AuthProvider.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L91">AuthProvider.ts:91</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -544,7 +491,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L393">AuthProvider.ts:393</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L410">AuthProvider.ts:410</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -572,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/b9d2cd3/src/AuthProvider.ts#L415">AuthProvider.ts:415</a></li>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L432">AuthProvider.ts:432</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -585,6 +532,62 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">GuardOptions</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="login" class="tsd-anchor"></a>
+					<h3>login</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">LoginLogoutOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L122">AuthProvider.ts:122</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initiate sign in flow</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">LoginLogoutOptions</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="logout" class="tsd-anchor"></a>
+					<h3>logout</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">logout<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">LoginLogoutOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/885c671/src/AuthProvider.ts#L189">AuthProvider.ts:189</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initiate sign out and destroy the session</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">LoginLogoutOptions</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -618,15 +621,6 @@
 								<a href="authprovider.html#cryptoprovider" class="tsd-kind-icon">crypto<wbr>Provider</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="authprovider.html#handleredirect" class="tsd-kind-icon">handle<wbr>Redirect</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="authprovider.html#login" class="tsd-kind-icon">login</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="authprovider.html#logout" class="tsd-kind-icon">logout</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="authprovider.html#msalclient" class="tsd-kind-icon">msal<wbr>Client</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -654,6 +648,9 @@
 								<a href="authprovider.html#handleoverage" class="tsd-kind-icon">handle<wbr>Overage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="authprovider.html#handleredirect" class="tsd-kind-icon">handle<wbr>Redirect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="authprovider.html#hasaccess" class="tsd-kind-icon">has<wbr>Access</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -664,6 +661,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="authprovider.html#isauthorized" class="tsd-kind-icon">is<wbr>Authorized</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="authprovider.html#login" class="tsd-kind-icon">login</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="authprovider.html#logout" class="tsd-kind-icon">logout</a>
 							</li>
 						</ul>
 					</li>
