@@ -64,7 +64,7 @@
 					<a href="https://github.com/Azure-Samples/msal-express-wrapper/actions/workflows/typedoc.yml"><img src="https://github.com/Azure-Samples/msal-express-wrapper/actions/workflows/typedoc.yml/badge.svg" alt="Typedoc"></a>
 				<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
 				<hr>
-				<p>This project illustrates a simple wrapper around <strong>MSAL Node</strong> <a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_node.confidentialclientapplication.html">ConfidentialClientApplication</a> class in order to streamline routine authentication tasks such as login, logout and token acquisition, as well as securing routes and protecting resources.</p>
+				<p>This project illustrates a simple wrapper around the <a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_node.confidentialclientapplication.html">ConfidentialClientApplication</a> class of the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-node#microsoft-authentication-library-for-node-msal-node">Microsoft Authentication Library for Node.js</a> (MSAL Node), in order to streamline routine authentication tasks such as login, logout and token acquisition, as well as securing routes and controlling access.</p>
 				<p>This is an open source project. <a href="https://github.com/Azure-Samples/msal-express-wrapper/issues/new">Suggestions</a> and <a href="https://github.com/Azure-Samples/msal-express-wrapper/blob/dev/CONTRIBUTING.md">contributions</a> are welcome!</p>
 				<blockquote>
 					<p>:mega: This project backs the tutorial: <a href="https://github.com/Azure-Samples/ms-identity-javascript-nodejs-tutorial">Enable your Node.js web app to sign-in users and call APIs with the Microsoft identity platform</a></p>
@@ -79,6 +79,9 @@
 					<li>(coming soon) Enable <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-conditional-access-dev-guide">Conditional Access</a> and <a href="https://docs.microsoft.com/azure/active-directory/develop/developer-guide-conditional-access-authentication-context">Zero-Trust</a></li>
 					<li>(coming soon) Run custom policies with <a href="https://docs.microsoft.com/azure/active-directory-b2c/overview">Azure AD B2C</a></li>
 				</ul>
+				<blockquote>
+					<p>:warning: Protected web API scenarios are currently not supported.</p>
+				</blockquote>
 				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
 					<h2>Prerequisites</h2>
 				</a>
@@ -183,6 +186,12 @@
 
 <span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">listen</span><span style="color: #000000">(</span><span style="color: #0070C1">SERVER_PORT</span><span style="color: #000000">, () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Server is listening on port </span><span style="color: #0000FF">${</span><span style="color: #0070C1">SERVER_PORT</span><span style="color: #0000FF">}</span><span style="color: #A31515">!`</span><span style="color: #000000">));</span>
 </code></pre>
+				<p>The wrapper stores user data on <code>req.session</code> variable. Below are some of the useful variables:</p>
+				<ul>
+					<li><code>req.session.isAuthenticated</code>: indicates if user is currently authenticated (<em>boolean</em>)</li>
+					<li><code>req.session.account</code>: MSAL.js account object containing useful information like ID token claims (see <a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#accountinfo">AccountInfo</a>)</li>
+					<li><code>req.session.remoteResources.{resourceName}</code>: Contains parameters related to an Azure AD / Azure AD B2C protected resource, including raw access tokens (see <a href="https://azure-samples.github.io/msal-express-wrapper/docs/modules.html#resource">Resource</a>)</li>
+				</ul>
 				<a href="#middleware" id="middleware" style="color: inherit; text-decoration: none;">
 					<h3>Middleware</h3>
 				</a>
@@ -303,8 +312,8 @@
 					<h3>Persistent caching</h3>
 				</a>
 				<p>MSAL Node has an in-memory cache by default. The demo app also features a <a href="./demo/App/utils/cachePlugin.js">persistent cache plugin</a> in order to save the cache to disk. This plugin is not meant to be production-ready. As such, you might want to implement persistent caching using a 3rd party library like <a href="https://redis.io/">redis</a>.</p>
-				<a href="#resources" id="resources" style="color: inherit; text-decoration: none;">
-					<h2>Resources</h2>
+				<a href="#information" id="information" style="color: inherit; text-decoration: none;">
+					<h2>Information</h2>
 				</a>
 				<ul>
 					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/initialize-confidential-client-application.md">Initializing a confidential client app with MSAL Node</a></li>
@@ -336,7 +345,97 @@
 						<a href="classes/keyvaultmanager.html" class="tsd-kind-icon">Key<wbr>Vault<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/tokenvalidator.html" class="tsd-kind-icon">Token<wbr>Validator</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/urlutils.html" class="tsd-kind-icon">Url<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#accessrule" class="tsd-kind-icon">Access<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#accesstokenclaims" class="tsd-kind-icon">Access<wbr>Token<wbr>Claims</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#appcredentials" class="tsd-kind-icon">App<wbr>Credentials</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#appsettings" class="tsd-kind-icon">App<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#authcodeparams" class="tsd-kind-icon">Auth<wbr>Code<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#authroutes" class="tsd-kind-icon">Auth<wbr>Routes</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#clientcertificate" class="tsd-kind-icon">Client<wbr>Certificate</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#guardoptions" class="tsd-kind-icon">Guard<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#handleredirectoptions" class="tsd-kind-icon">Handle<wbr>Redirect<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#idtokenclaims" class="tsd-kind-icon">Id<wbr>Token<wbr>Claims</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#initializationoptions" class="tsd-kind-icon">Initialization<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#keyvaultcredential" class="tsd-kind-icon">Key<wbr>Vault<wbr>Credential</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#policy" class="tsd-kind-icon">Policy</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#resource" class="tsd-kind-icon">Resource</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#signinoptions" class="tsd-kind-icon">Sign<wbr>InOptions</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#signoutoptions" class="tsd-kind-icon">Sign<wbr>Out<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#state" class="tsd-kind-icon">State</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#tokenrequestoptions" class="tsd-kind-icon">Token<wbr>Request<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#userinfo" class="tsd-kind-icon">User<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#validationoptions" class="tsd-kind-icon">Validation<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#aadauthorityconstants" class="tsd-kind-icon">AADAuthority<wbr>Constants</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#accessconstants" class="tsd-kind-icon">Access<wbr>Constants</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#appstages" class="tsd-kind-icon">App<wbr>Stages</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#configurationerrormessages" class="tsd-kind-icon">Configuration<wbr>Error<wbr>Messages</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#errorcodes" class="tsd-kind-icon">Error<wbr>Codes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#errormessages" class="tsd-kind-icon">Error<wbr>Messages</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#infomessages" class="tsd-kind-icon">Info<wbr>Messages</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#keyvaultcredentialtypes" class="tsd-kind-icon">Key<wbr>Vault<wbr>Credential<wbr>Types</a>
 					</li>
 				</ul>
 			</nav>
@@ -353,6 +452,7 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
